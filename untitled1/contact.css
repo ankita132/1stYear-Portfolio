@@ -152,7 +152,7 @@ h1:not(.q-1) {
     margin-top:20pt;
     font-size:18pt;
     font-weight:bold;
-    margin-left:30%;
+    margin-left:35%;
     animation:fadein 4s ease-in 0s;
 }
 @keyframes fadein{
