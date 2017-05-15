@@ -1,0 +1,321 @@
+html{
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    background:url(8888-blue-circles-2560x1600-abstract-wallpaper.jpg) no-repeat center center fixed;
+    background-size:cover;
+    height:auto;
+    overflow-y: hidden;
+}
+nav {
+    position:relative;
+    align-items: center;
+    justify-content: space-around;
+    padding:0;
+    width: 100%;
+    background: transparent;
+}
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+.material-icons{
+    transform:translate(-10%,25%);
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color:  #ffffe6;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 10px;
+    position:relative;
+    transition: all .5s;
+}
+
+nav ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    content: ' ';
+    color: transparent;
+    background:  #ffffe6;
+    height: 1px;
+    text-align: center;
+    opacity: 0;
+}
+
+
+nav ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+nav ul li a:hover:after{
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+@-webkit-keyframes fill {
+    0% {
+        width: 0;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 1px;
+    }
+}
+.photo{
+    background:url(ankita.jpg);
+    background-size:cover;
+    width:150pt;
+    height:150pt;
+    border-radius:50%;
+    position:absolute;
+    left:calc(50% - 75pt);
+    top:calc( 50% - 75pt);
+    animation:fadeIn 4s forwards;
+}
+
+.half-circle-1 {
+    opacity:0.5;
+    width: 160pt;
+    height: 80pt;
+    border-top-left-radius: 80pt;
+    border-top-right-radius: 80pt;
+    border: 2px solid gray;
+    border-bottom: 0;
+    position:absolute;
+    top:calc( 50% - 85pt);
+    left:calc( 50% - 80pt);
+    animation:fadeIn 6s forwards;
+}
+.half-circle-2{
+    width: 180pt;
+    height: 90pt;
+    border-top-right-radius: 90pt;
+    border-top-left-radius: 90pt;
+    border: 2px solid gray;
+    border-bottom: 0;
+    position:absolute;
+    top:50%;
+    left:calc( 50% - 90pt);
+    transform: rotate(180deg);
+    animation:fadeIn 6s forwards;
+}
+.half-circle-3{
+    width: 200pt;
+    height: 100pt;
+    border-top-left-radius: 100pt;
+    border-top-right-radius: 100pt;
+    border: 2px solid gray;
+    border-bottom: 0;
+    position:absolute;
+    top:calc(50% - 100pt);
+    left:calc(50% - 100pt);
+    animation:fadeIn 6s forwards;
+}
+.half-circle-4{
+    width: 220pt;
+    height: 110pt;
+    border-top-right-radius: 110pt;
+    border-top-left-radius: 110pt;
+    border: 2px solid gray;
+    border-bottom: 0;
+    position:absolute;
+    top:50%;
+    left:calc(50% - 110pt);
+    transform: rotate(180deg);
+    animation:fadeIn 6s forwards;
+}
+.acads{
+    outline-color:grey;
+    outline-width:thick;
+    width:50pt;
+    height:50pt;
+    opacity:0.8;
+    border-radius:50%;
+    background-color: #044f91;
+    position:absolute;
+    left:calc( 50% + 105pt );
+    top:calc(50% - 10pt);
+    transform:translate(-50%);
+    animation:fadeIn 6s forwards;
+}
+.involve{
+    outline-color:grey;
+    outline-width:thick;
+    width:50pt;
+    height:50pt;
+    opacity:0.8;
+    border-radius:50%;
+    background-color: #044f91;
+    position:absolute;
+    top:calc(50% - 10pt);
+    left:calc( 50% - 155pt );
+    transform:translate(50%);
+    animation:fadeIn 6s forwards;
+}
+.place{
+    outline-color:grey;
+    outline-width:thick;
+    width:50pt;
+    height:50pt;
+    opacity:0.8;
+    border-radius:50%;
+    background-color: #044f91;
+    animation:fadeIn 6s forwards;
+    position:absolute;
+    top:calc( 50% + 80pt);
+    left:50%;
+    transform:translate(-50%);
+}
+.ic{
+    font-size:36px;
+    color:#2cc1de;
+    animation:fadeIn 6s forwards;
+    transform:translate(50%,50%);
+    z-index:100;
+
+}
+.ic:hover{
+    color:peachpuff;
+    cursor:pointer;
+}
+@keyframes fadeIn {
+    from { opacity:0; }
+    to { opacity:1;}
+}
+
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+h1 {
+    color:whitesmoke;
+    margin:0 auto;
+    transform: translateY(70%);
+    font-weight: bold;
+    border-right: .1em solid black;
+    width: 10ch;
+    white-space: nowrap;
+    overflow: hidden;
+   -webkit-animation: typing 2s steps(7,end), blink 0.5s step-end infinite alternate;
+}
+h2{
+    color:white;
+}
+.acads h2{
+    transform:translate(120%,-150%);
+}
+.place h2{
+    transform:translate(-50%,50%);
+}
+.involve h2{
+    transform:translate(-300%,-140%);
+}
+.acads .tooltiptext {
+    visibility: hidden;
+    width: 250pt;
+    background-color: #272728;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5pt 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.acads .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #272728 transparent transparent;
+}
+.acads:hover .tooltiptext {
+    visibility: visible;
+    opacity:1;
+}
+
+.place .tooltiptext {
+    visibility: hidden;
+    width: 250pt;
+    background-color: #272728;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5pt 0;
+    position: absolute;
+    z-index: 1;
+    top: 110%;
+    left: -200%;
+
+}
+
+.place .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+.place:hover .tooltiptext {
+    visibility: visible;
+}
+
+.involve .tooltiptext {
+    visibility: hidden;
+    width: 250pt;
+    background-color: #272728;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5pt 0;
+    position: absolute;
+    z-index: 1;
+    top: -5pt;
+    right: 110%;
+}
+
+.involve .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #272728;
+}
+.involve:hover .tooltiptext {
+    visibility: visible;
+}

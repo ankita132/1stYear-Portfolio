@@ -1,0 +1,270 @@
+* {
+ margin:0;
+    padding:0;
+    border: 0 none;
+    position: relative;
+}
+html, body  {
+    font-family: 'Roboto', sans-serif;
+    background: url(8888-blue-circles-2560x1600-abstract-wallpaper.jpg) no-repeat center center fixed;
+    background-size:cover;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+nav {
+    position:relative;
+    align-items: center;
+    justify-content: space-around;
+    padding:0;
+    top:2.4%;
+    width: 100%;
+    background: transparent;
+}
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+.material-icons{
+    transform:translate(-10%,25%);
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color:  #ffffe6;
+    font-weight: 800;
+    font-size:12pt;
+    margin: 0 10px;
+    position:relative;
+    transition: all .5s;
+}
+
+nav ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    content: ' ';
+    color: transparent;
+    background:  #ffffe6;
+    height: 1px;
+    text-align: center;
+    opacity: 0;
+}
+
+
+nav ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+nav ul li a:hover:after{
+    z-index: -10;
+    animation: fill 1s forwards;
+    -webkit-animation: fill 1s forwards;
+    -moz-animation: fill 1s forwards;
+    opacity: 1;
+}
+@-webkit-keyframes fill {
+    0% {
+        width: 0;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 1px;
+    }
+}
+
+[class*="type-"]:before {
+    display: inline-block;
+    margin-right: 0.2rem;}
+
+.gallery {
+    margin: 10vh 25vw;
+    width: 60vw;
+    transform-style: preserve-3d;
+}
+.gallery:before {
+    content: '';
+    padding-top: 50%;
+    display: inline-block;
+    width: 0;
+}
+.card {
+    background-size: 2px 2px, cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    top: 5%;
+    margin:0 auto;
+    box-shadow: 0 0 2rem rgba(0,0,0,.5);
+    border-radius: 3px;
+}
+.skill-1 {
+    background:url(c-1.jpg) no-repeat center center fixed;
+    background-size:contain;
+}
+.skill-2 {
+    background: url(c-2.jpg) no-repeat center center fixed;
+    background-size:contain;
+}
+.skill-3 {
+    background:url(c-3.jpg) no-repeat center center fixed;
+    background-size:contain;
+}
+h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 30pt;
+    background: #FF7361;
+    box-shadow: 0 0 5px rgba(0,0,0,.7);
+}
+h2:before {
+    position: absolute;
+    left: 1rem;
+    font-weight: 300;
+    color: #00262F;
+}
+.card p {
+    text-align: center;
+    color:#FFFFF0;
+    line-height: 1.3;
+    font-size:22pt;
+    margin-top: 15vh;
+}
+h3 {
+    font-size: 5vw;
+    font-weight: 700;
+    margin: 1vh 0 1vh;
+}
+
+input {visibility: hidden;}
+label {
+    background: #15BFCC;
+    position: absolute;
+    top: 0; bottom: 0;
+    margin: auto 0;
+    color: #fff;
+    font-size: 36px;
+    line-height: 15vh;
+    height: 10vh;
+    width: 2vw;
+    padding: 0 .5vw;
+    cursor: pointer;
+    opacity: .2;
+    transition: .2s linear;
+}
+label .f-1{
+    text-align:center;
+}
+.arrow + .arrow
+ {
+    right: 0;
+    text-align: left;
+}
+#image-1:checked ~ .skill-1 .arrow,
+#image-2:checked ~ .skill-2 .arrow,
+#image-3:checked ~ .skill-3 .arrow {
+    background:  #0D757D;
+    display: block;
+}
+
+
+.card:hover label {
+    animation: light 1s infinite alternate;
+}
+.card:hover label + label {
+    animation-delay: .5s;
+}
+.card:hover label:hover {
+    animation: none;
+    opacity: .8;
+    width: 4vw;
+    font-size: 36px;
+}
+
+#image-1:checked ~ .skill-2,
+#image-2:checked ~ .skill-3,
+#image-3:checked ~ .skill-1 {
+    animation: 1s move-back;
+    animation-fill-mode: forwards;
+    transform-origin: left center;
+    z-index: 2;
+}
+#image-1:checked ~ .skill-3,
+#image-2:checked ~ .skill-1,
+#image-3:checked ~ .skill-2 {
+    animation: 1.5s move-front;
+    animation-fill-mode: forwards;
+    transform-origin: right center;
+    z-index: 2;
+}
+#image-1:checked ~ .skill-1,
+#image-2:checked ~ .skill-2,
+#image-3:checked ~ .skill-3 {
+    animation: 2s central;
+    animation-fill-mode: forwards;
+    transform-origin: center center;
+    z-index:3;
+}
+
+@keyframes move-back {
+    0% {transform: scale(1) translatex(0%);}
+    70% {transform: scale(.9) translatex(-100%);}
+    100% {transform: scale(.9) translatex(-7%);}
+}
+@keyframes move-front {
+    0% {transform: scale(1) translatex(0%);}
+    70% {transform: scale(.9) translatex(100%);}
+    100% {transform: scale(.9) translatex(7%);}
+}
+@keyframes central {
+    0% {transform: scale(.8);z-index: 1;}
+    80% {transform: scale(.5);z-index: 3;}
+    100% {transform: scale(1);z-index: 3;}
+}
+@keyframes light {
+    50% {opacity: .7;}
+}
+
+.f-1{
+    font-size:36px;
+    transform:translateY(-30%);
+}
+ .f-1 .material-icons:hover{
+     position:relative;
+}
+
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+h1 {
+    color:whitesmoke;
+    margin:0 auto;
+    transform: translateY(70%);
+    font-weight: bold;
+    border-right: .1em solid black;
+    width: 6.5ch;
+    white-space: nowrap;
+    overflow: hidden;
+    position:relative;
+    top:4%;
+    -webkit-animation: typing 1.5s steps(5, end), blink 0.5s step-end infinite alternate;
+}
+

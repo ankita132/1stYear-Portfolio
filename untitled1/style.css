@@ -1,0 +1,182 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
+    height:auto;
+    overflow-y:hidden;
+}
+.head {
+    font-family: "Lucida Calligraphy";
+    font-size:25pt;
+    float:left;
+}
+/*.pre-loader{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    z-index:1000;
+    background-color:black;
+    animation:fadeout 8s;
+}
+
+@keyframes fadeout {
+    0%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        height:0;
+    }
+}*/
+.item{
+    position:relative;
+    font-weight:bold;
+    color:#ffffe6;
+    text-align:center;
+    font-size:40pt;
+    top:60%;
+}
+nav {
+    position:relative;
+    align-items: center;
+    justify-content: space-around;
+    padding:0;
+    width: 100%;
+    background: transparent;
+}
+nav ul {
+    list-style: none;
+    text-align: right;
+}
+.material-icons{
+    transform:translate(-10%,25%);
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color:  #ffffe6;
+    font-weight: 800;
+    margin: 0 10px;
+    position:relative;
+    transition: all .5s;
+}
+
+nav ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    content: ' ';
+    color: transparent;
+    background:  #ffffe6;
+    height: 1px;
+    text-align: center;
+    opacity: 0;
+}
+
+
+nav ul li a:hover {
+    color: #fff;
+    z-index: 1;
+}
+nav ul li a:hover:after{
+    z-index: -10;
+    animation: fill 1s forwards;
+    opacity: 1;
+}
+@-webkit-keyframes fill {
+    0% {
+        width: 0;
+        height: 1px;
+    }
+    100% {
+        width: 100%;
+        height: 1px;
+    }
+}
+nav ul .head a:hover:after{
+    background:transparent;
+    animation:none;
+}
+.pic-wrapper {
+    position: absolute;
+    top:-1%;
+    width: 100%;
+    height: 101vh;
+    overflow: hidden;
+}
+/*.container{
+    width:100%;
+    opacity:0;
+    animation:display 10s ease 3.5s forwards;
+    height:auto;
+}
+@keyframes display {
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+*/
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: slideShow 24s linear infinite 0s;
+    -webkit-animation: slideShow 24s linear infinite 0s;
+}
+.pic-1 {
+    opacity: 1;
+    background: url(1.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.pic-2 {
+    animation-delay: 6s;
+    background: url(blue-graphic-design.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.pic-3 {
+    animation-delay: 12s;
+    background: url(2.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.pic-4 {
+    animation-delay: 18s;
+    background: url(4597466-technology-wallpapers.jpg) no-repeat center center;
+    background-size: cover;
+}
+@keyframes slideShow {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    5% {
+        opacity: 1
+    }
+    25% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
